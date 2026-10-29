@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Little Learners Library | Worksheets & Storybooks</title>
+<style>
+:root{--ink:#1f2937;--muted:#64748b;--purple:#6558d3;--teal:#0f766e;--pink:#ffe4ef;--yellow:#fff2bf;--blue:#e0f2fe;--line:#e5e7eb;--bg:#fbfbff}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Arial,sans-serif;background:var(--bg);color:var(--ink)}
+header{background:linear-gradient(120deg,#fce7f3,#e0e7ff 55%,#ccfbf1);padding:22px max(20px,calc((100% - 1120px)/2));}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}.brand{font-size:1.25rem;font-weight:850;letter-spacing:-.04em}.brand span{color:var(--purple)}
+nav{display:flex;gap:8px;flex-wrap:wrap}button,.tab{border:0;border-radius:12px;padding:10px 14px;font-weight:700;cursor:pointer;font-size:.95rem}.tab{background:#ffffffa8;color:#374151}.tab.active{background:var(--purple);color:white}.btn{background:var(--purple);color:#fff}.btn.secondary{background:#fff;color:var(--purple);border:1px solid #d8d3ff}.btn.dark{background:#111827}.btn:disabled{opacity:.45;cursor:not-allowed}
+main{max-width:1120px;margin:auto;padding:26px 20px 60px}.hero{display:grid;grid-template-columns:1.3fr .7fr;gap:24px;align-items:center;padding:28px 0 30px}.eyebrow{color:var(--teal);font-weight:800;text-transform:uppercase;letter-spacing:.1em;font-size:.78rem}.hero h1{font-size:clamp(2rem,5vw,3.5rem);line-height:1.03;letter-spacing:-.055em;margin:12px 0}.hero p{color:var(--muted);font-size:1.08rem;line-height:1.6;max-width:620px}.hero-art{background:linear-gradient(145deg,#fef3c7,#fce7f3);border-radius:28px;min-height:230px;display:grid;place-items:center;font-size:5.2rem;position:relative}.hero-art small{position:absolute;bottom:20px;font-size:.9rem;font-weight:800;color:#6b21a8;background:#fff;padding:8px 12px;border-radius:99px}
+.notice{background:#ecfdf5;border:1px solid #a7f3d0;padding:14px 16px;border-radius:16px;margin:12px 0 22px;color:#065f46;font-size:.93rem}.toolbar{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin:24px 0 16px}.toolbar h2{margin:0;font-size:1.65rem;letter-spacing:-.03em}.filters{display:flex;gap:8px;flex-wrap:wrap}.filter{background:white;border:1px solid var(--line);color:#475569}.filter.active{border-color:var(--purple);color:var(--purple);background:#f5f3ff}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.card{background:white;border:1px solid var(--line);border-radius:20px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 5px 18px #1e293b08}.cover{min-height:150px;padding:20px;display:flex;align-items:center;justify-content:center;font-size:3.3rem;position:relative}.cover.math{background:#dbeafe}.cover.english{background:#fce7f3}.cover.activity{background:#d1fae5}.cover.puzzle{background:#fef3c7}.cover.story{background:#ede9fe}.cover.comic{background:#ffedd5}.pill{position:absolute;top:12px;left:12px;background:#ffffffd9;border-radius:99px;padding:5px 9px;font-size:.72rem;font-weight:800;color:#475569}.cardbody{padding:17px;display:flex;flex-direction:column;gap:10px;flex:1}.card h3{margin:0;font-size:1.08rem}.desc{margin:0;color:var(--muted);font-size:.9rem;line-height:1.5;min-height:42px}.meta{display:flex;justify-content:space-between;gap:8px;color:var(--muted);font-size:.82rem}.price{font-size:1.08rem;font-weight:850;color:#111827}.cardactions{display:flex;gap:8px;margin-top:auto}.cardactions button{flex:1;padding:10px 8px}.free{color:#047857}
+.hidden{display:none!important}.two-col{display:grid;grid-template-columns:1fr 330px;gap:22px}.panel{background:#fff;border:1px solid var(--line);border-radius:18px;padding:20px}.panel h3{margin-top:0}.cartrow{display:flex;justify-content:space-between;gap:10px;padding:12px 0;border-bottom:1px solid var(--line)}.cartrow:last-child{border-bottom:0}.small{font-size:.84rem;color:var(--muted)}.empty{padding:32px;text-align:center;color:var(--muted);background:#fff;border:1px dashed #cbd5e1;border-radius:18px}
+label{display:block;font-size:.88rem;font-weight:700;margin:12px 0 6px}input,select{width:100%;padding:12px;border:1px solid #cbd5e1;border-radius:10px;font:inherit;background:white}.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.checkout{max-width:760px;margin:auto}.qrbox{border:2px dashed #c4b5fd;background:#faf5ff;border-radius:16px;padding:20px;text-align:center;margin:14px 0}.qrplaceholder{font-size:3rem}.footer{border-top:1px solid var(--line);padding:24px 20px;text-align:center;color:var(--muted);font-size:.85rem}.badge{font-size:.72rem;background:#f1f5f9;border-radius:99px;padding:4px 8px;font-weight:800}.modalback{position:fixed;inset:0;background:#0f172a88;display:grid;place-items:center;padding:20px;z-index:5}.modal{max-width:480px;width:100%;background:white;border-radius:20px;padding:24px;box-shadow:0 20px 80px #0003}.modal h2{margin-top:0}.modalhead{display:flex;justify-content:space-between;align-items:center}.x{background:#f1f5f9;color:#334155;padding:7px 11px}
+@media(max-width:800px){.hero{grid-template-columns:1fr}.hero-art{min-height:150px}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.two-col{grid-template-columns:1fr}}
+@media(max-width:520px){.grid{grid-template-columns:1fr}.formgrid{grid-template-columns:1fr}.brand{width:100%}header{padding:18px 16px}main{padding:18px 14px 42px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="nav">
+    <div class="brand">🌈 Little <span>Learners</span> Library</div>
+    <nav>
+      <button class="tab active" data-page="worksheets">Worksheets</button>
+      <button class="tab" data-page="stories">Story Books</button>
+      <button class="tab" data-page="cart">🛒 Cart <span id="cartCount">0</span></button>
+      <button class="btn secondary" id="accountBtn">Sign in / Create account</button>
+    </nav>
+  </div>
+</header>
+<main>
+  <section class="hero">
+    <div><div class="eyebrow">Learn • Imagine • Grow</div><h1>Little activities.<br>Big discoveries.</h1><p>Printable worksheets, fun puzzles, creative activities and storybooks that make learning joyful for young minds.</p><button class="btn" onclick="showPage('worksheets')">Explore worksheets →</button> <button class="btn secondary" onclick="showPage('stories')">Read a story</button></div>
+    <div class="hero-art" aria-label="Books, stars and pencils illustration">📚 ✏️ 🧩<small>Screen-free fun for curious kids</small></div>
+  </section>
+  <div class="notice" id="freeNotice">🎁 <b>Welcome gift:</b> Sign in to claim your first <b>5 free worksheets</b> and <b>1 free storybook</b>. Free limits are tracked in this demo browser.</div>
+  <section id="catalogPage">
+    <div class="toolbar"><h2 id="pageTitle">Explore Worksheets</h2><div class="filters" id="filters">
+      <button class="filter active" data-category="All">All</button><button class="filter" data-category="Maths">Maths</button><button class="filter" data-category="English">English</button><button class="filter" data-category="Activities">Activities</button><button class="filter" data-category="Puzzles">Puzzles</button>
+    </div></div>
+    <div class="small" style="margin:-5px 0 16px">Prices are shown in Indian rupees (₹) and US dollars ($). USD values are indicative; checkout uses the displayed INR amount in this demo.</div>
+    <div class="grid" id="productGrid"></div>
+  </section>
+  <section id="cartPage" class="hidden">
+    <div class="toolbar"><h2>Your Cart</h2><button class="btn secondary" onclick="showPage('worksheets')">Continue shopping</button></div>
+    <div id="cartContents"></div>
+  </section>
+  <section id="checkoutPage" class="hidden">
+    <div class="toolbar"><h2>Checkout</h2><button class="btn secondary" onclick="showPage('cart')">← Back to cart</button></div>
+    <div class="checkout panel">
+      <p class="small">Complete the details below. In this demo, payment is a manual QR workflow and downloads are unlocked only after the demo confirmation step. A live site must verify payment securely on the server.</p>
+      <div class="formgrid"><div><label for="buyerName">Full name</label><input id="buyerName" placeholder="Your name"></div><div><label for="buyerEmail">Email</label><input id="buyerEmail" type="email" placeholder="you@example.com"></div></div>
+      <label for="buyerPhone">Phone number</label><input id="buyerPhone" placeholder="+91 ...">
+      <div class="qrbox"><div class="qrplaceholder">📱 ▦</div><h3>Scan with PhonePe</h3><p class="small">Demo placeholder — add your real PhonePe QR image and merchant details before launch.</p><p><b>Amount to pay: <span id="checkoutTotal">₹0</span></b></p><p class="small">After scanning, enter the UPI transaction reference below. Do not rely on a screenshot alone as proof of payment.</p></div>
+      <label for="txn">UPI transaction reference / UTR</label><input id="txn" placeholder="Enter transaction reference">
+      <p class="small">On a live website, the order should remain pending until the payment is verified through a payment gateway or by an administrator.</p>
+      <button class="btn" style="width:100%;margin-top:12px" id="confirmPay">Submit payment reference (demo)</button>
+      <p id="checkoutMessage" class="small"></p>
+    </div>
+  </section>
+  <section id="downloadsPage" class="hidden">
+    <div class="toolbar"><h2>Your Library</h2><span class="badge">Demo account</span></div>
+    <div class="notice">Your free and purchased demo downloads appear here. In a live store, files should be delivered through secure, expiring download links after payment verification.</div>
+    <div class="grid" id="downloadGrid"></div>
+  </section>
+</main>
+<footer class="footer">© <span id="year"></span> Little Learners Library · Made for curious young minds<br><span>Demo storefront — sample content and local-browser account only. Not yet connected to a live payment provider or server.</span></footer>
+
+<div id="accountModal" class="modalback hidden">
+  <div class="modal"><div class="modalhead"><h2>Create your account</h2><button class="x" id="closeModal">✕</button></div>
+    <p class="small">Demo only: account details stay in this browser. Do not use a real password here.</p>
+    <label for="accountName">Name</label><input id="accountName" placeholder="Parent / guardian name">
+    <label for="accountEmail">Email</label><input id="accountEmail" type="email" placeholder="you@example.com">
+    <label for="accountPassword">Password (demo only)</label><input id="accountPassword" type="password" placeholder="Create a demo password">
+    <button class="btn" style="width:100%;margin-top:16px" id="createAccount">Create / sign in</button>
+    <p id="accountMessage" class="small"></p>
+  </div>
+</div>
+<script>
+const products = [
+ {id:'math1',name:'Maths Starter Worksheets',category:'Maths',type:'worksheet',age:'Ages 4–6',pages:8,price:99,freeFile:'sample_pdfs/free_math_sample.pdf',icon:'🔢',class:'math',desc:'Counting, number recognition, simple addition and shapes.',file:'sample_pdfs/free_math_sample.pdf'},
+ {id:'eng1',name:'English Letter Fun',category:'English',type:'worksheet',age:'Ages 4–6',pages:8,price:99,icon:'🔤',class:'english',desc:'Letter tracing, missing letters and early vocabulary.',file:'sample_pdfs/free_english_sample.pdf'},
+ {id:'act1',name:'Creative Activity Pack',category:'Activities',type:'worksheet',age:'Ages 3–7',pages:12,price:129,icon:'🎨',class:'activity',desc:'Drawing, patterns, feelings and everyday learning.',file:'sample_pdfs/activity_pack_sample.pdf'},
+ {id:'puz1',name:'Brain-Boosting Puzzles',category:'Puzzles',type:'worksheet',age:'Ages 5–7',pages:10,price:119,icon:'🧩',class:'puzzle',desc:'Patterns, riddles, matching and observation games.',file:'sample_pdfs/free_puzzle_sample.pdf'},
+ {id:'math2',name:'Maths Practice Bundle',category:'Maths',type:'worksheet',age:'Ages 6–8',pages:24,price:249,icon:'➕',class:'math',desc:'Number practice, addition, subtraction and logic.',file:'sample_pdfs/free_math_sample.pdf'},
+ {id:'eng2',name:'Words & Sentences',category:'English',type:'worksheet',age:'Ages 6–8',pages:20,price:229,icon:'📝',class:'english',desc:'Vocabulary, sentence building and comprehension.',file:'sample_pdfs/free_english_sample.pdf'},
+ {id:'story1',name:'The Helpful Little Sparrow',category:'Moral Stories',type:'story',age:'Ages 4–7',pages:6,price:99,icon:'🐦',class:'story',desc:'An original kindness story with questions at the end.',file:'sample_pdfs/free_moral_story.pdf'},
+ {id:'story2',name:'Panchatantra-Inspired Tales',category:'Moral Stories',type:'story',age:'Ages 5–8',pages:18,price:199,icon:'🦁',class:'story',desc:'Original animal fables, morals and comprehension questions.',file:'sample_pdfs/free_moral_story.pdf'},
+ {id:'story3',name:'Classic Comic Reading Pack',category:'Comics',type:'story',age:'Ages 7+',pages:16,price:179,icon:'💥',class:'comic',desc:'A placeholder listing for licensed or original comic-style reading.',file:'sample_pdfs/free_moral_story.pdf'}
+];
+const state={page:'worksheets',category:'All',user:null,cart:[],library:[],freeWorksheets:0,freeStory:false};
+const $=id=>document.getElementById(id);
+function load(){try{const s=JSON.parse(localStorage.getItem('lll_demo')||'{}');Object.assign(state,s);state.cart=state.cart||[];state.library=state.library||[];}catch(e){}}
+function save(){localStorage.setItem('lll_demo',JSON.stringify({user:state.user,cart:state.cart,library:state.library,freeWorksheets:state.freeWorksheets,freeStory:state.freeStory}));}
+function money(n){return '₹'+n.toLocaleString('en-IN')+' / $'+(n/83).toFixed(2)}
+function showPage(page){state.page=page;['catalogPage','cartPage','checkoutPage','downloadsPage'].forEach(id=>$(id).classList.add('hidden'));$(page==='worksheets'||page==='stories'?'catalogPage':page==='cart'?'cartPage':page==='checkout'?'checkoutPage':'downloadsPage').classList.remove('hidden');$('pageTitle').textContent=page==='stories'?'Story Books':'Explore Worksheets';$('filters').classList.toggle('hidden',page==='stories');document.querySelectorAll('.tab').forEach(b=>b.classList.toggle('active',b.dataset.page===page));if(page==='cart')renderCart();if(page==='checkout')updateCheckout();if(page==='downloads')renderDownloads();renderProducts();}
+function renderProducts(){const isStory=state.page==='stories';let list=products.filter(p=>isStory?p.type==='story':p.type==='worksheet'&&(state.category==='All'||p.category===state.category));$('productGrid').innerHTML=list.map(p=>{const isFree= p.type==='story'?!state.freeStory:state.freeWorksheets<5;const inLib=state.library.includes(p.id);const priceLabel=inLib?'<span class="free">In your library</span>':(isFree?'<span class="free">Free benefit available</span>':money(p.price));return `<article class="card"><div class="cover ${p.class}"><span class="pill">${p.category}</span>${p.icon}</div><div class="cardbody"><h3>${p.name}</h3><p class="desc">${p.desc}</p><div class="meta"><span>${p.age}</span><span>${p.pages} pages</span></div><div class="price">${priceLabel}</div><div class="cardactions">${inLib?`<button class="btn" onclick="downloadProduct('${p.id}')">Download</button>`:`<button class="btn" onclick="addProduct('${p.id}')">${isFree?'Claim free':'Add to cart'}</button>`}<button class="btn secondary" onclick="previewProduct('${p.id}')">Details</button></div></div></article>`}).join('')||'<div class="empty">No items in this category yet.</div>'}
+function addProduct(id){const p=products.find(x=>x.id===id);if(!state.user){openAccount();$('accountMessage').textContent='Create a demo account to use your free downloads or cart.';return}if(state.library.includes(id)){downloadProduct(id);return}if(p.type==='worksheet'&&state.freeWorksheets<5){state.freeWorksheets++;state.library.push(id);save();alert('Added to your free library! ('+state.freeWorksheets+'/5 free worksheets used)');renderProducts();return}if(p.type==='story'&&!state.freeStory){state.freeStory=true;state.library.push(id);save();alert('Your free storybook has been added to your library!');renderProducts();return}if(!state.cart.includes(id))state.cart.push(id);save();updateCartCount();alert('Added to cart.');renderProducts()}
+function previewProduct(id){const p=products.find(x=>x.id===id);alert(p.name+'\\n\\n'+p.desc+'\\n\\nIncludes: '+p.pages+' pages\\nAge: '+p.age+'\\nPrice: '+money(p.price)+'\\n\\nNote: The included PDFs are sample previews for this website demo. Replace them with your complete original products before launch.')}
+function updateCartCount(){$('cartCount').textContent=state.cart.length}
+function renderCart(){if(!state.cart.length){$('cartContents').innerHTML='<div class="empty">Your cart is empty. Explore the worksheets and storybooks to get started.</div>';return}let total=0;const rows=state.cart.map(id=>{const p=products.find(x=>x.id===id);total+=p.price;return `<div class="cartrow"><div><b>${p.name}</b><div class="small">${p.category} · ${p.pages} pages</div><div class="small">${money(p.price)}</div></div><button class="btn secondary" onclick="removeProduct('${id}')">Remove</button></div>`}).join('');$('cartContents').innerHTML=`<div class="two-col"><div class="panel"><h3>Items (${state.cart.length})</h3>${rows}</div><div class="panel"><h3>Order summary</h3><div class="cartrow"><span>Subtotal</span><b>${money(total)}</b></div><div class="cartrow"><span>Digital delivery</span><b>Free</b></div><div class="cartrow"><span>Total</span><b>${money(total)}</b></div><p class="small">INR is the illustrative checkout amount for this demo.</p><button class="btn" style="width:100%" onclick="startCheckout()">Proceed to checkout</button></div></div>`}
+function removeProduct(id){state.cart=state.cart.filter(x=>x!==id);save();updateCartCount();renderCart()}
+function startCheckout(){if(!state.user){openAccount();return}showPage('checkout')}
+function updateCheckout(){let total=state.cart.reduce((s,id)=>s+products.find(p=>p.id===id).price,0);$('checkoutTotal').textContent='₹'+total.toLocaleString('en-IN')}
+function openAccount(){$('accountModal').classList.remove('hidden')}
+function closeAccount(){$('accountModal').classList.add('hidden')}
+function renderDownloads(){const list=state.library.map(id=>products.find(p=>p.id===id)).filter(Boolean);$('downloadGrid').innerHTML=list.map(p=>`<article class="card"><div class="cover ${p.class}">${p.icon}</div><div class="cardbody"><h3>${p.name}</h3><p class="desc">${p.desc}</p><button class="btn" onclick="downloadProduct('${p.id}')">Download PDF sample</button></div></article>`).join('')||'<div class="empty">Your library is empty. Sign in and claim your free items.</div>'}
+function downloadProduct(id){const p=products.find(x=>x.id===id);if(!state.library.includes(id)){alert('This item is not in your library yet.');return}if(p.file){const a=document.createElement('a');a.href=p.file;a.download=p.file.split('/').pop();document.body.appendChild(a);a.click();a.remove()}else{alert('No file attached yet.')} }
+document.querySelectorAll('.tab').forEach(b=>b.addEventListener('click',()=>{if(b.dataset.page==='cart')showPage('cart');else showPage(b.dataset.page)}));
+document.querySelectorAll('.filter').forEach(b=>b.addEventListener('click',()=>{state.category=b.dataset.category;document.querySelectorAll('.filter').forEach(x=>x.classList.toggle('active',x===b));renderProducts()}));
+$('accountBtn').addEventListener('click',()=>{if(state.user){if(confirm('Signed in as '+state.user.email+'. Open your library?'))showPage('downloads');else if(confirm('Sign out?')){state.user=null;save();$('accountBtn').textContent='Sign in / Create account'}}else openAccount()});
+$('closeModal').addEventListener('click',closeAccount);
+$('createAccount').addEventListener('click',()=>{const name=$('accountName').value.trim(),email=$('accountEmail').value.trim(),pw=$('accountPassword').value;if(!name||!email||!pw){$('accountMessage').textContent='Please fill in all fields.';return}state.user={name,email};save();$('accountBtn').textContent='Hi, '+name.split(' ')[0]+' ▾';$('accountMessage').textContent='Demo account ready. Your first 5 worksheets and one storybook are free.';setTimeout(()=>{closeAccount();renderProducts()},700)});
+$('confirmPay').addEventListener('click',()=>{const name=$('buyerName').value.trim(),email=$('buyerEmail').value.trim(),txn=$('txn').value.trim();if(!name||!email||!txn){$('checkoutMessage').textContent='Please enter your name, email and transaction reference.';return}const total=state.cart.reduce((s,id)=>s+products.find(p=>p.id===id).price,0);$('checkoutMessage').textContent='Demo order submitted for ₹'+total+'. No payment has been verified. In production, an administrator or payment gateway must verify this transaction before downloads are unlocked.';});
+$('year').textContent=new Date().getFullYear();
+load();if(state.user)$('accountBtn').textContent='Hi, '+state.user.name.split(' ')[0]+' ▾';updateCartCount();renderProducts();
+</script>
+</body>
+</html>
